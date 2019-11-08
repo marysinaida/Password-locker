@@ -1,6 +1,6 @@
 import unittest
 from main import User
-# from main import Credentials
+from main import Credentials
 
 class TestUser(unittest.TestCase):
     '''
@@ -46,6 +46,25 @@ class TestUser(unittest.TestCase):
 
         self.new_user.delete_user()#Deleting a user object
         self.assertEqual(len(User.user_list),1)
+
+class TestCredentials(unittest.TestCase):
+    '''
+    Test class that defines test cases for the credential class behaviours.
+    '''
+    def setUp(self):
+        '''Setup method to run before each test cases.'''
+        self.new_credentials = Credentials("Snyder","Twitter","1234@dsm")
+        #create credentials object
+
+    def test_init(self):
+        '''
+        Test if the object is properly initialized
+        '''
+        self.assertEqual(self.new_credentials.user_name,"Snyder")
+        self.assertEqual(self.new_credentials.account_name,"Twitter")
+        self.assertEqual(self.password,"1234@dsm")
+
+
 
 
 

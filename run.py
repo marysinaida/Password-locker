@@ -20,3 +20,9 @@ def save_user(user):
     function to save a new user account
     '''
     User.save_user(user)
+
+def save_credentials(Credential):
+    '''
+    function to save a new user credentials
+    '''
+    Credentials.save_credentials(Credential)

@@ -10,8 +10,8 @@ This is a project that enable clients to store and retrieve their credentials up
 * Loggin in
 * Option of computer generated password
 * Create new credential
-* Display existing credentials
 * Delete credential
+* Display existing credentials
 * Search credential by site name
 * Copy credential
 * exit for leaving the site

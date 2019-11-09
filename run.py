@@ -26,3 +26,10 @@ def save_credentials(Credential):
     function to save a new user credentials
     '''
     Credentials.save_credentials(Credential)
+
+def verify_user(user,password):
+    '''
+    a function that ensure the existanceof the user before creating credentials
+    '''
+    checking_user = Credentials.chek_user(username,password)
+    return checking_user

@@ -65,11 +65,25 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credentials.password,"1234@dsm")
 
     def test_save_credentials(self):
-        self.new_credentials.save_credentials()
+        self.new_credentials.save_credentials() #saving the new credentials
         Instagram = Credentials('Snyder','Instagram','1234@dsm')
         Instagram.save_credentials()
         self.assertEqual(len(Credentials.credentials_list),2)
 
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run.
+        '''
+        Credentials.credentials_list = []
+
+    def test_delete_credentials(self):
+        self.new_credentials.save_credentials()
+        Instagram = Credentials('Snyder','Instagram','1234@dsm')
+        Instagram.save_credentials()
+        Instagram.delete_credentials()
+        self.assertEqual(len(Credentials.credentials_list),1)    
+
+   
 
 
 

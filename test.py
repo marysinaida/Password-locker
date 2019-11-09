@@ -1,5 +1,6 @@
 import unittest
 from main import User, Credentials
+import pyperclip
 
 class TestUser(unittest.TestCase):
     '''
@@ -90,7 +91,23 @@ class TestCredentials(unittest.TestCase):
         Instagram = Credentials('Snyder','Instagram','1234@dsm')
         Instagram.save_credentials()
         credential_found = Credentials.find_by_account_name('Instagram')
-        self.assertEqual(credential_found.account_name,'Instagram')    
+        self.assertEqual(credential_found.account_name,'Instagram') 
+
+    def test_copy_credentials(self):
+        '''
+        A function to test to check if the copy of credentials method are the vaild
+        '''
+        self.new_credentials.save_credentials()
+        Instagram = Credentials('Snyder','Instagram','1234@dsm')
+        Instagram.save_credentials()
+        found_credential = None
+        for credential in Credentials.credentials_list:
+            found_credential = Credentials.find_by_account_name(credential.account_name)
+            return pyperclip.copy(found_credential.password)
+            Credentials.copy_credentials(self.new_credential.account_name)
+            self.assertEqual('1234@dsm',pyperclip.paste())
+
+
 
    
 

@@ -15,6 +15,12 @@ def create_credntials(user_name,account_name,password):
     new_credential =Credentials(user_name,account_name,password):
     return new_credential
 
+def save_use(user):
+    '''
+    function to save a new user account
+    '''
+    User.save_user(user)
+
 def save_user(user):
     '''
     function to save a new user account

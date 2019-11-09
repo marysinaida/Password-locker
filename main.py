@@ -37,16 +37,16 @@ class Credentials:
     credentials_list = [] #empty credential list
     user_credentials_list = []
 
-    # @classMethod
-    # def check_user(cls,username,password):
-    #     '''
-    #     method that confirms the user_list match with the keyed password and name.
-    #     '''
-    #     current_user = ''
-    #     for user in User.user_list:
-    #         if(user.username == username and user.password == password):
-    #             current_user = user.username
-    #             return current_user
+    @classmethod
+    def check_user(cls,username,password):
+        '''
+         method that confirms the user_list match with the keyed password and name.
+        '''
+        current_user = ''
+        for user in User.user_list:
+            if(user.username == username and user.password == password):
+                current_user = user.username
+                return current_user
 
      
 
@@ -71,5 +71,13 @@ class Credentials:
         delete_credentials a funtion to delete user credentials
         '''
         Credentials.credentials_list.remove(self)
-        
+
+    @classmethod
+    def find_by_account_name(cls,account_name):
+        '''
+        Method to find a given account type associated with given credentials.
+        '''
+        for credential in cls.credentials_list:
+            if credential.account_name == account_name:
+                return credential  
  

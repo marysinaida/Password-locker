@@ -28,3 +28,29 @@ class User:
         '''
 
         User.user_list.remove(self)
+
+class Credentials:
+    '''
+    Class that generate new instances of credentials
+    '''
+
+    credentials_list = [] #empty credential list
+    user_credentials_list = []
+
+
+    def __init__(self,user_name,account_name,password):
+        
+        '''__init method that helps defining properties for our objects.'''
+
+        self.user_name = user_name
+        self.account_name = account_name
+        self.password = password
+
+    def save_credentials(self):
+        '''
+        save_credentials method saves credentials objects into credentials_list
+        '''
+
+        Credentials.credentials_list.append(self)
+        
+ 

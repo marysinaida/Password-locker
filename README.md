@@ -52,6 +52,7 @@ This is a project that enable clients to store and retrieve their credentials up
 2.You can use this command (git clone *my link*) to clone the project to your machine if you have git .
 
 3.cd into the project folder and open in text editor either code. or atom.
+
 4.Then run chmod +x run.py on your project directory.
 
 5.Run  ./run.py to launch the program.

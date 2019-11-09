@@ -3,7 +3,7 @@
 #### By **MARY DORCAS SINAIDA**&trade;
 
 ## Description
-This is a project that enable clients to store and retrieve their credentials upon loggin
+This is a project that enable clients to store and retrieve their credentials upon log-in.
 
 ## Features
 * Create account for new user
@@ -30,7 +30,7 @@ This is a project that enable clients to store and retrieve their credentials up
     </tr> 
     <tr>
         <td>on login</td>
-        <td>show the credential detaila</td>
+        <td>show the credential detail</td>
         <td>the store credentials are displayed</td>
     </tr>
     <tr>
@@ -40,7 +40,7 @@ This is a project that enable clients to store and retrieve their credentials up
     </tr>
     <tr>
         <td>option of exit</td>
-        <td>choose ex option</td>
+        <td>choose exit option</td>
         <td>exit</td>
     </tr>
        
@@ -51,8 +51,7 @@ This is a project that enable clients to store and retrieve their credentials up
 
 2.You can use this command (git clone *my link*) to clone the project to your machine if you have git .
 
-3.cd into the project folder and open in text editor.
-
+3.cd into the project folder and open in text editor either code. or atom.
 4.Then run chmod +x run.py on your project directory.
 
 5.Run  ./run.py to launch the program.

@@ -81,7 +81,17 @@ class TestCredentials(unittest.TestCase):
         Instagram = Credentials('Snyder','Instagram','1234@dsm')
         Instagram.save_credentials()
         Instagram.delete_credentials()
-        self.assertEqual(len(Credentials.credentials_list),1)    
+        self.assertEqual(len(Credentials.credentials_list),1)
+
+    def test_find_by_account_name(self):
+        '''
+        Test to check if the test_find_by_account_name returns the correct credentials
+        '''
+        self.new_credentials.save_credentials()
+        Instagram = Credentials('Snyder','Instagram','1234@dsm')
+        Instagram.save_credentials()
+        credential_found = Credentials.find_by_account_name('Instagram')
+        self.assertEqual(credential_found.account_name,'Instagram')    
 
    
 
